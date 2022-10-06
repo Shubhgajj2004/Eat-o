@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Explore"
+        android:icon="@drawable/ic_explore_unchecked"
+        android:title="Explore"
+        />
+    <item
+        android:id="@+id/Favourite"
+        android:icon="@drawable/ic_favourite_unchecked"
+        android:title="Favourite" />
+
+    <item android:id="@+id/AllItems"
+        android:icon="@drawable/ic_search"
+        android:title="All Dishes"/>
+    <item
+        android:id="@+id/Orders"
+        android:icon="@drawable/ic_free_icon_1"
+        android:title="Orders" />
+    <item
+        android:id="@+id/Checkout"
+        android:icon="@drawable/ic_cart_unchecked"
+        android:title="Checkout" />
+</menu>

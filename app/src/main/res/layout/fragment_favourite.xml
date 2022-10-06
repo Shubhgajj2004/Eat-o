@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoard.FavouriteFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="250dp"
+                android:layout_height="230dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_favourtie_logo" />
+
+            <View
+                android:id="@+id/backCategoryBtn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_back_btn" />
+
+            <LinearLayout
+                android:id="@+id/lLay12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/backCategoryBtn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sofia_pro_medium"
+                    android:text="Favourite"
+                    android:textColor="@color/company_color"
+                    android:textFontWeight="700"
+                    android:textSize="34sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/totalFavDishes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sofia_pro_medium"
+                        android:text="XX"
+                        android:textColor="#9796A1"
+                        android:textFontWeight="400"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sofia_pro_medium"
+                        android:text=" favourite dishes"
+                        android:textColor="#9796A1"
+                        android:textFontWeight="400"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favRec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lLay12"
+                android:layout_marginHorizontal="20dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="40sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

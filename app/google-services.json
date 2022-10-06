@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770224210051",
+    "project_id": "eato-d0454",
+    "storage_bucket": "eato-d0454.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770224210051:android:7ec21abdfa17b3de311bb6",
+        "android_client_info": {
+          "package_name": "com.shubh.eato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770224210051-g1odtt8j0bjk0gr5d4nphqefhj8r3j4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3OVe3qlhFErOt9p9qMzkgBXyLxf02s8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770224210051-g1odtt8j0bjk0gr5d4nphqefhj8r3j4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

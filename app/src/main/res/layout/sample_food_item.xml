@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="20dp">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/exploreShimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="9dp"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:id="@+id/nStarRes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X.Y"
+                    android:textColor="#171717"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★"
+                    android:textColor="@color/company_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/nPeopleRes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:textColor="#171717"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/itemImgRes"
+                android:layout_width="230dp"
+                android:layout_height="160dp"
+                android:background="@color/shimmerColor"
+                android:elevation="1dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+
+            <TextView
+                android:id="@+id/itemNameRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sofia_pro_medium"
+                android:text="XXXX YYYY"
+                android:textColor="#3C3F50"
+                android:textFontWeight="700"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sofia_pro_medium"
+                    android:text="₹  "
+                    android:textColor="@color/company_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/itemPriceRes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/soifa_pro_semibold"
+                    android:text="XX"
+                    android:textColor="@color/company_color"
+                    android:textFontWeight="500"
+                    android:textSize="22sp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circular_btn"
+                    android:backgroundTint="@color/company_color"
+                    android:elevation="2dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+                <!--                android:id="@+id/addRes"-->
+                <!--                android:layout_width="36dp"-->
+                <!--                android:layout_height="36dp"-->
+                <!--                android:backgroundTint="@color/company_color"-->
+                <!--                app:maxImageSize="20dp"-->
+                <!--                android:scaleType="centerInside"-->
+                <!--                android:src="@drawable/ic_baseline_add_24" />-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.cardview.widget.CardView>
