@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -27,6 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.shubh.eato.Adapters.exploreItemsAdapter;
 import com.shubh.eato.FirebaseVarClass.FirebaseVar;
 import com.shubh.eato.Models.ItemsExploreModel;
+import com.shubh.eato.ProfileActivity;
 import com.shubh.eato.WalletActivity;
 import com.shubh.eato.categoryItemActivity;
 import com.shubh.eato.databinding.FragmentExploreBinding;
@@ -91,6 +91,13 @@ public class ExploreFragment extends Fragment {
             }
         });
 
+        binding.profileExplore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), ProfileActivity.class));
+            }
+        });
+
 
         return binding.getRoot();
     }
@@ -115,14 +122,20 @@ public class ExploreFragment extends Fragment {
                 list.clear();
                 listKey.clear();
 
-                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                    ItemsExploreModel adp = snapshot1.getValue(ItemsExploreModel.class);
-                    ItemsExploreModel adp2 = new ItemsExploreModel(snapshot1.getKey());
+                if (getActivity() == null) {
+                    return;
+                } else {
 
-                    list.add(adp);
-                    listKey.add(adp2);
-                    adapter.showShimmer = false;
 
+                    for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                        ItemsExploreModel adp = snapshot1.getValue(ItemsExploreModel.class);
+                        ItemsExploreModel adp2 = new ItemsExploreModel(snapshot1.getKey());
+
+                        list.add(adp);
+                        listKey.add(adp2);
+                        adapter.showShimmer = false;
+
+                    }
                 }
 
 
@@ -145,16 +158,11 @@ public class ExploreFragment extends Fragment {
                 fm.setShimmer(null);
 
                 //goto all items of category on clicking category button
-                if(id == FirebaseVar.SOUTHINDIAN)
-                {
+                if (id == FirebaseVar.SOUTHINDIAN) {
                     btnClick(binding.southIndianIcon, FirebaseVar.ISSOUTHINDIAN, "South", snapshot.getValue(String.class));
-                }
-                else if(id == FirebaseVar.NORTHINDIAN)
-                {
+                } else if (id == FirebaseVar.NORTHINDIAN) {
                     btnClick(binding.northIndianIcon, FirebaseVar.ISNORTHINDIAN, "North", snapshot.getValue(String.class));
-                }
-                else if(id == FirebaseVar.CHIENESE)
-                {
+                } else if (id == FirebaseVar.CHIENESE) {
                     btnClick(binding.chieneseIcon, FirebaseVar.ISCHINESE, "Chienese", snapshot.getValue(String.class));
                 }
 
@@ -192,14 +200,20 @@ public class ExploreFragment extends Fragment {
 
     }
 
-    public void setSliderImage(DatabaseReference reference, String id, ShapeableImageView img, ShimmerFrameLayout shimmer)
-    {
+    public void setSliderImage(DatabaseReference reference, String id, ShapeableImageView img, ShimmerFrameLayout shimmer) {
         reference.child(id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Glide.with(getContext()).load(snapshot.getValue(String.class)).into(img);
-                shimmer.stopShimmer();
-                shimmer.setShimmer(null);
+
+                if (getActivity() == null) {
+                    return;
+                } else {
+
+
+                    Glide.with(getContext()).load(snapshot.getValue(String.class)).into(img);
+                    shimmer.stopShimmer();
+                    shimmer.setShimmer(null);
+                }
             }
 
             @Override

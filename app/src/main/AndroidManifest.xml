@@ -16,6 +16,21 @@
         android:theme="@style/Theme.EatO"
         tools:targetApi="31">
         <activity
+            android:name=".Profile.AttributionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuccesfullyOrderedActivity"
+            android:exported="false" />
+        <activity
             android:name=".WalletActivity"
             android:exported="false" />
         <activity

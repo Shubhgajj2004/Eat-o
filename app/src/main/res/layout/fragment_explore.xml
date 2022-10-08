@@ -59,6 +59,7 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/profile_temp_img"
                 android:elevation="10dp"
+                android:onClick="profileImgClick"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
 
@@ -88,8 +89,8 @@
                             android:id="@+id/adImgSlider"
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            android:scaleType="centerCrop"
                             android:background="@color/shimmerColor"
+                            android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
 
                     </com.facebook.shimmer.ShimmerFrameLayout>
@@ -104,19 +105,19 @@
                             android:id="@+id/memeImgSlider"
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            android:scaleType="centerCrop"
                             android:background="@color/shimmerColor"
+                            android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
                     </com.facebook.shimmer.ShimmerFrameLayout>
 
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/festivalImgSlider"
-                        android:layout_width="match_parent"
-                        android:layout_height="180dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/profile_temp_img"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
+<!--                    <com.google.android.material.imageview.ShapeableImageView-->
+<!--                        android:id="@+id/festivalImgSlider"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="180dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/profile_temp_img"-->
+<!--                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />-->
 
                     <com.facebook.shimmer.ShimmerFrameLayout
                         android:id="@+id/shimmerShow2"
@@ -127,8 +128,8 @@
                             android:id="@+id/show2"
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            android:scaleType="centerCrop"
                             android:background="@color/shimmerColor"
+                            android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
                     </com.facebook.shimmer.ShimmerFrameLayout>
 

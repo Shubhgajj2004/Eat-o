@@ -1,7 +1,9 @@
 package com.shubh.eato;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,6 +65,13 @@ public class WalletActivity extends AppCompatActivity {
 
         //fetch the balances
         fetchAndSetBalance(userRef);
+
+        binding.backBtnWallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(WalletActivity.this, DashboardActivity.class));
+            }
+        });
 
 
 

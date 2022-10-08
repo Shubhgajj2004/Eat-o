@@ -3,6 +3,7 @@ package com.shubh.eato.DashBoard;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,10 +30,14 @@ import com.google.firebase.database.ValueEventListener;
 import com.shubh.eato.Adapters.cartAdapter;
 import com.shubh.eato.FirebaseVarClass.FirebaseVar;
 import com.shubh.eato.Models.itemCartModel;
+import com.shubh.eato.SuccesfullyOrderedActivity;
 import com.shubh.eato.databinding.FragmentCheckoutBinding;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
 
 
 public class CheckoutFragment extends Fragment {
@@ -45,6 +51,7 @@ public class CheckoutFragment extends Fragment {
     FirebaseDatabase mDatabase;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
+    Boolean isRoomDeliver = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -102,6 +109,7 @@ public class CheckoutFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
+                    isRoomDeliver = b;
                     binding.addressDelivery.setVisibility(View.VISIBLE);
                     binding.addressDeliveryBtn.setVisibility(View.VISIBLE);
                 } else {
@@ -125,6 +133,67 @@ public class CheckoutFragment extends Fragment {
                 });
             }
         });
+
+        binding.checkoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Date currentime=Calendar.getInstance().getTime();
+                String pattern = "dd MMM, HH:MM";
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                String date = simpleDateFormat.format(currentime);
+                startActivity(new Intent(getContext(), SuccesfullyOrderedActivity.class));
+
+
+                Random rnd = new Random();
+                int number = rnd.nextInt(999999);
+
+                tempOrder.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        DatabaseReference orderRef =  mDatabase.getReference().child(FirebaseVar.USERS).child(mUser.getUid())
+                                .child(FirebaseVar.ORDERS).child(FirebaseVar.SUCCEDSFULORDERS).push();
+                        orderRef.child("OrderDetails").setValue(snapshot.getValue());
+                        orderRef.child("Details").child(FirebaseVar.PAYABLEAMOUNT).setValue(binding.totalPay.getText().toString());
+                        orderRef.child("Details").child(FirebaseVar.STATUS).setValue("Pending");
+                        orderRef.child("Details").child(FirebaseVar.VERIFICATIONCODE).setValue(String.format("%06d", number));
+                        orderRef.child("Details").child(FirebaseVar.TIME).setValue(date).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                DatabaseReference temp =  mDatabase.getReference().child(FirebaseVar.USERS).child(mUser.getUid())
+                                        .child(FirebaseVar.ORDERS).child(FirebaseVar.TEMPORDER);
+                                temp.removeValue();
+                            }
+                        });
+                        if(isRoomDeliver)
+                        {
+                            orderRef.child("Details").child(FirebaseVar.ADDRESS).setValue(binding.addressDelivery.getText().toString());
+                        }
+
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+            }
+        });
+
+//        //fragment time
+//        getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
+//            @Override
+//            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+//                // We use a String here, but any type that can be put in a Bundle is supported
+//                String result = bundle.getString("bundleKey");
+//                Toast.makeText(getContext(), "result", Toast.LENGTH_SHORT).show();
+//                // Do something with the result
+//            }
+//        });
 
         binding.timePickerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,7 +233,6 @@ public class CheckoutFragment extends Fragment {
 
 
     public static class TimePickerFragment2 extends DialogFragment {
-
         @NonNull
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -175,13 +243,17 @@ public class CheckoutFragment extends Fragment {
             return new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                    Toast.makeText(getContext(), Integer.toString(i) + " : " + Integer.toString(i1), Toast.LENGTH_SHORT).show();
+//                    Bundle result = new Bundle();
+//                    result.putString("bundleKey", Integer.toString(i));
+//                    getParentFragmentManager().setFragmentResult("requestKey", result);
+//                    requireActivity().getSupportFragmentManager().setFragmentResult("TimePickerRequestKey", new Bundle());
+                   Toast.makeText(getContext(), Integer.toString(i) + " : " + Integer.toString(i1), Toast.LENGTH_SHORT).show();
                 }
+
             }, hour, minute, false);
         }
-
-
     }
+
 
 
     public interface callBack {

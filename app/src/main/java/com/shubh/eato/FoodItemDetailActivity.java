@@ -3,6 +3,7 @@ package com.shubh.eato;
 import static com.shubh.eato.R.drawable.ic_favourite_btn;
 import static com.shubh.eato.R.drawable.ic_favourite_checked_btn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -105,6 +106,21 @@ public class FoodItemDetailActivity extends AppCompatActivity {
             }
         });
 
+        //On clicking backButton goto the last activity
+        binding.backBtnItemDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FoodItemDetailActivity.this, DashboardActivity.class));
+
+            }
+        });
+
+        binding.reviewsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FoodItemDetailActivity.this, reviewsActivity.class));
+            }
+        });
 
         //if item is already in favorite list then remove and if not then add in the list
         binding.favDetailBtn.setOnClickListener(new View.OnClickListener() {

@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
@@ -51,6 +53,13 @@ public class categoryItemActivity extends AppCompatActivity {
         //set the data fetched from intent
         Glide.with(categoryItemActivity.this).load(getIntent().getStringExtra(FirebaseVar.IMG)).into(binding.showCatIcon);
         binding.placeCatName.setText(getIntent().getStringExtra(FirebaseVar.NAME));
+
+        binding.backCategoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(categoryItemActivity.this, DashboardActivity.class));
+            }
+        });
 
 
 

@@ -12,6 +12,8 @@
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_cart_illustartion.xml" value="0.1865" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_cart_unchecked.xml" value="0.185" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_checked_cart.xml" value="0.185" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_cooked.xml" value="0.1865" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_cooking_process.xml" value="0.1865" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_decrement_btn.xml" value="0.1865" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_explore_unchecked.xml" value="0.185" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_favourite_btn.xml" value="0.2525" />
@@ -21,6 +23,7 @@
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_group_18178.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_group_18178__1_.xml" value="0.1535" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_increment_btn.xml" value="0.1865" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_item_delivered.xml" value="0.1865" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_logo_font.xml" value="0.199" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_orders_unchecked.xml" value="0.1" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/ic_rightward_arrow.xml" value="0.1535" />
@@ -47,14 +50,19 @@
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/drawable/track_switch.xml" value="0.1865" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout-v28/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout-v28/array_of_dropdown.xml" value="0.25" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_attribution.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_category_item.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_feedback.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_food_item_detail.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_otp.xml" value="0.264" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_reviews.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_sign_up_detail.xml" value="0.264" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_succesfully_ordered.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_wallet.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/custom_tab.xml" value="0.24895833333333334" />
@@ -62,12 +70,15 @@
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/fragment_checkout.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/fragment_explore.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/fragment_favourite.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/fragment_orders.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/fragment_transaction.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/item_selector.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/round_outline.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/sample_cart_items.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/sample_category_food_item.xml" value="0.25" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/sample_food_item.xml" value="0.264" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/sample_order.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/layout/sample_reviews.xml" value="0.264" />
         <entry key="..\:/Users/SHUBH/AndroidStudioProjects/EatO/app/src/main/res/menu/buttom_navigation_bar.xml" value="0.25" />
       </map>
     </option>

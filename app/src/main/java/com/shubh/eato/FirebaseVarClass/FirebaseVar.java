@@ -46,6 +46,15 @@ public class FirebaseVar {
     public static String SHOW2 = "show2";
     public static String CURRENTBALANCE = "currentBalance";
     public static String POINTS = "Points";
+    public static String PAYABLEAMOUNT = "PayableAmount";
+    public static String STATUS = "Status";
+    public static String TIME = "Time";
+    public static String VERIFICATIONCODE = "verificationCode";
+    public static String COMMENTS = "Comments";
+    public static String PUBLISHERIMG = "publisherImg";
+    public static String PUBLISHEDSTAR = "publishedStar";
+    public static String PUBLISHEDDATE = "publishedDate";
+    public static String PUBLISHERNAME = "publisherName";
 
 
 }
